@@ -3,6 +3,9 @@ export default function Page() {
     <div>
       <h1>CPRG 306: Web Development 2 - Assignments</h1>
       <a href="/week-2">Go to Week 2</a>
+      <a href="/week-3">Go to Week 3</a>
+      <a href="/week-4">Go to Week 4</a>
+
     </div>
   );  
 }
