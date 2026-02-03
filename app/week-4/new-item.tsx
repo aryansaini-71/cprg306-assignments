@@ -47,7 +47,7 @@ return (
             }`}
           />
           <div className="flex gap-4 mb-4">
-          {/* Quantity Field */}
+    
           <div className="flex-1">
             <label className="block mb-1 font-bold">Quantity:</label>
             <input
@@ -56,7 +56,7 @@ return (
               max="99"
               required
               value={quantity}
-              onChange={(e) => setQuantity(Number(e.target.value))} // Convert text to a number!
+              onChange={(e) => setQuantity(Number(e.target.value))}
               className="w-full p-2 border border-gray-300 rounded"
             />
           </div>
@@ -86,8 +86,6 @@ return (
             <p className="text-red-500 text-sm mt-1">Name is required!</p>
           )}
         </div>
-        <p className="text-gray-500 text-xs italic">More fields coming soon...</p>
-
         <button
         type="submit"
         disabled={!name}
