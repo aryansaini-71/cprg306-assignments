@@ -17,14 +17,14 @@ export default function Page() {
   const handleItemSelect = (itemName: string) => {
     const cleanedName = itemName
       .split(',')[0] 
-      .replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '') // Remove emojis
+      .replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '') 
       .trim(); 
     
     setSelectedItemName(cleanedName);
   };
 
   return (
-    <main className="bg-black min-h-screen p-8 text-white">
+    <main className="bg-black min-h-screen p-8 text-white ">
       <h1 className="text-4xl font-bold mb-8 text-center">Shopping List & Recipes</h1>
 
       <div className="flex flex-col md:flex-row gap-10 justify-center items-start">
