@@ -1,14 +1,11 @@
 "use client";
 
 import Link from "next/link";
-// Make sure this path matches your folder structure exactly
 import { useUserAuth } from "./_utils/auth-context";
 
 export default function Week8LandingPage() {
-  // We grab the user and auth functions from our context
   const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
 
-  // Function to handle clicking the Login button
   const handleLogin = async () => {
     try {
       await gitHubSignIn();
@@ -17,7 +14,6 @@ export default function Week8LandingPage() {
     }
   };
 
-  // Function to handle clicking the Logout button
   const handleLogout = async () => {
     try {
       await firebaseSignOut();
@@ -32,7 +28,6 @@ export default function Week8LandingPage() {
 
       <div className="bg-slate-900 p-8 rounded-lg shadow-2xl border border-slate-800">
         {!user ? (
-          /* Scenario 1: User needs to log in */
           <div className="text-center">
             <p className="mb-6 text-slate-400 italic">Please sign in to manage your list.</p>
             <button
@@ -43,7 +38,6 @@ export default function Week8LandingPage() {
             </button>
           </div>
         ) : (
-          /* Scenario 2: User is already logged in */
           <div className="text-center">
             <p className="text-xl mb-2 font-semibold text-blue-400">
               Hello, {user.displayName}!
